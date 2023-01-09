@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/style_constraint_layout"
+    tools:context=".EditingActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view_up"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/scroll_view_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout style="@style/style_linear_layout">
+
+            <EditText
+                android:id="@+id/edit_text_up"
+                style="@style/style_edit_text"
+                android:hint="@string/input_question"
+                tools:ignore="Autofill" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll_view_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll_view_up">
+
+        <LinearLayout style="@style/style_linear_layout">
+
+            <EditText
+                android:id="@+id/edit_text_down"
+                style="@style/style_edit_text"
+                android:hint="@string/input_answer"
+                tools:ignore="Autofill" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/image_button_delete"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_button_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_delete"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/image_button_save"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_delete"
+        app:srcCompat="@drawable/btn_save"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

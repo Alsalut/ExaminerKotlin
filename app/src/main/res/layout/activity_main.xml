@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/style_constraint_layout"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        style="@style/style_scroll_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout style="@style/style_linear_layout">
+
+            <TextView
+                android:id="@+id/text_view_question"
+                style="@style/style_text_view" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/image_button_plus"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_plus_black"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/image_button_next"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/btn_next_black"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/image_button_show_answer"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_answer"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/image_button_show_question"
+        style="@style/style_image_button"
+        android:background="@drawable/background_image_button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_question"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
